@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navList {
+    @apply text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative
+}
+.navListUnderline {
+    @apply absolute w-full h-1 bg-lightBlue bottom-0 hidden transition-all duration-200
+}
+.navDiv {
+    @apply relative w-[1140px] mx-auto flex items-center justify-between
+}
+.navLogIn {
+    @apply py-3 px-6 font-mullish text-white border-lightBlue border-2 rounded-sm text-sm font-bold
+}
+.navSignUp {
+    @apply py-3 px-7 font-mullish text-sm rounded-sm font-bold bg-white text-lightBlue300 border transition-all duration-200 hover:text-lightBlue500
+}
