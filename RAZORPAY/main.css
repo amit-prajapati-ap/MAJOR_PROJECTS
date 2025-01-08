@@ -17,3 +17,6 @@
 .navSignUp {
     @apply py-3 px-7 font-mullish text-sm rounded-sm font-bold bg-white text-lightBlue300 border transition-all duration-200 hover:text-lightBlue500
 }
+.heroFirstButton {
+    @apply bg-lightBlue rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px] text-white flex items-center gap-2
+}
