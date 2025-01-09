@@ -20,3 +20,14 @@
 .heroFirstButton {
     @apply bg-lightBlue rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px] text-white flex items-center gap-2
 }
+.moveImage {
+    animation: moveCompany 10s infinite linear;
+}
+@keyframes moveCompany {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -50%;
+    }
+}
