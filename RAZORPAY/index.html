@@ -18,31 +18,33 @@
     <div class="overflow-x-hidden relative w-full">
 
         <!-- CTA Header -->
-         <section class="flex justify-between relative gap-2">
+        <section class="flex justify-between relative gap-2">
 
             <!-- Left Part -->
-             <div class="flex flex-row justify-between">
+            <div class="flex flex-row justify-between">
                 <div class="bg-lightBlue500 w-[50px] skew-x-[30deg] -mx-8"></div>
                 <div class="bg-blue-200 w-[15px] skew-x-[30deg] mx-8"></div>
                 <div class="bg-blue-100 w-[120px] skew-x-[30deg] -mx-8 shadow-md"></div>
                 <div class="bg-blue-100 w-[120px] skew-x-[30deg] mx-8 shadow-md"></div>
-             </div>       
+            </div>
 
             <!-- Main Part -->
-             <div class="flex justify-between items-center gap-2 font-mullish py-2">
+            <div class="flex justify-between items-center gap-2 font-mullish py-2">
                 <p class="font-[600] text-xl">RazorpayX Payroll: 3 Clicks, Payroll Fixed! Automate payroll now!</p>
-                <button class="text-white bg-lightBlue500 py-3 px-6 font-bold rounded-md cursor-pointer hover:bg-blue-600 hover:text-lightGray">Know More</button>
-             </div>
+                <button
+                    class="text-white bg-lightBlue500 py-3 px-6 font-bold rounded-md cursor-pointer hover:bg-blue-600 hover:text-lightGray">Know
+                    More</button>
+            </div>
 
             <!-- Right Part -->
-             <div class="flex flex-row justify-between">
+            <div class="flex flex-row justify-between">
                 <div class="bg-blue-100 w-[120px] skew-x-[30deg] shadow-md"></div>
                 <div class="bg-blue-100 w-[120px] skew-x-[30deg] -mr-8 shadow-md"></div>
                 <div class="bg-blue-200 w-[15px] skew-x-[30deg] mx-8"></div>
                 <div class="bg-lightBlue500 w-[50px] skew-x-[30deg] -mx-8"></div>
-             </div>              
+            </div>
 
-         </section>
+        </section>
 
         <!-- Navigation Bar -->
         <nav class="bg-deepBlue">
@@ -52,7 +54,7 @@
                     <img src="./images/razorpaylogo.svg" alt="Razorpay" width="125px" height="30px">
                 </a>
 
-                <ul class="flex gap-6">
+                <ul class="hidden gap-6 lg:flex">
                     <li class="navList group">
                         <a href="#">Payments</a>
                         <div class="navListUnderline group-hover:block "></div>
@@ -83,12 +85,12 @@
 
                 <div class="flex space-x-6">
 
-                    <div class="my-auto">
+                    <div class="my-auto hidden lg:block">
                         <img src="https://framerusercontent.com/images/LE1lFDrQaNpb8cs0KSTC4zTiY.svg" alt="Flag"
                             width="28px" height="20px">
                     </div>
-                    <button class="navLogIn">Log in</button>
-                    <button class="navSignUp">Sign Up</button>
+                    <button class="navLogIn block">Log in</button>
+                    <button class="navSignUp hidden lg:block">Sign Up</button>
 
                 </div>
 
@@ -97,7 +99,7 @@
 
         <!-- Hero Section -->
         <section class="relative bg-deepBlue">
-            <div class="flex w-83% max-w-[1080px] flex-row justify-between items-center mx-auto">
+            <div class="flex w-10/12 max-w-[1080px] flex-col lg:flex-row justify-between items-center mx-auto">
                 <!-- Left Part -->
                 <div class="text-white space-y-8">
                     <h1 class="font-mullish font-bold text-[40px] leading-[1.2]">Power your finance, grow your business
@@ -130,8 +132,11 @@
 
             <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
                 <!-- Heading -->
-                <h1 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold">Accept Payments with Razorpay
+                <h1 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold hidden md:block">Accept
+                    Payments with Razorpay
                     Payment Suite</h1>
+                <h1 class="font-mullish text-center text-5xl leading-[1.2] font-extrabold block md:hidden">Explore
+                    Razorpay Payment Suite</h1>
                 <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
 
                 <!-- Content Box -->
@@ -170,11 +175,11 @@
                         </ul>
 
                         <!-- Button and Hyperlink -->
-                        <div class="flex gap-4 flex-row items-center">
-                            <button class="heroFirstButton">
+                        <div class="flex flex-col-reverse md:flex-row gap-4 items-center md:w-fit w-full">
+                            <button class="w-full md:w-fit heroFirstButton justify-center">
                                 <p>Sign Up Now</p> <i class="fa-solid fa-chevron-right"></i>
                             </button>
-                            <div class="flex items-center cursor-pointer group gap-3">
+                            <div class="flex items-center cursor-pointer group gap-3 self-start md:self-center">
                                 <a href="#"
                                     class="font-mullish font-bold text-lightBlue500 group-hover:text-grayBlue transition-all duration-200">Know
                                     More</a>
@@ -185,14 +190,15 @@
                     </div>
 
                     <!-- Right Section  -->
-                    <img src="./images/hero2Image.png" class="max-w-[600px] w-[50%]">
+                    <img src="./images/hero2Image.png"
+                        class="w-[50%] hidden md:block lg:block md:max-w-[400px] lg:max-w-[600px] absolute bottom-0 right-0">
                 </div>
             </div>
         </section>
 
         <!-- Cards Section Type 1 -->
         <section class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
-            <div class="grid w-full grid-cols-3 gap-4">
+            <div class="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Card 1 -->
                 <div
                     class="w-full min-h-[15rem] relative cursor-pointer hover:shadow-blue-400 shadow-lg hover:scale-105 transition-all duration-200 my-5">
@@ -530,15 +536,15 @@
                             </ul>
 
                             <!-- Button and Hyperlink -->
-                            <div class="flex gap-4 flex-row items-center">
-                                <button class="heroFirstButton relative md:pr-[90px]">
+                            <div class="flex gap-4 flex-col-reverse md:flex-row items-center w-full md:w-fit">
+                                <button class="heroFirstButton relative md:pr-[90px] self-stretch justify-center">
                                     Sign Up
                                     <div
                                         class="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] flex justify-center items-center">
                                         <i class="fa-solid fa-arrow-right skew-x-[-20deg]"></i>
                                     </div>
                                 </button>
-                                <div class="flex items-center cursor-pointer group gap-3">
+                                <div class="flex items-center cursor-pointer group gap-3 self-start md:self-center">
                                     <a href="#"
                                         class="font-mullish font-bold text-lightBlue500 group-hover:text-grayBlue transition-all duration-200">Know
                                         More</a>
@@ -549,14 +555,15 @@
                         </div>
 
                         <!-- Right Section  -->
-                        <img src="./images/feature2image1.png" class="max-w-[600px] w-[50%]">
+                        <img src="./images/feature2image1.png"
+                            class="max-w-[600px] w-[50%] absolute bottom-0 right-0 hidden md:block">
                     </div>
                 </div>
             </div>
 
             <!-- Cards Section 2 -->
             <section class="w-11/12 max-w-[1080px] mx-auto pt-4 my-12">
-                <div class="grid w-full grid-cols-3 gap-4">
+                <div class="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <!-- Card 1 -->
                     <div
                         class="w-full min-h-[15rem] relative cursor-pointer hover:shadow-blue-400 shadow-lg hover:scale-105 transition-all duration-200">
@@ -706,7 +713,7 @@
             <!-- Demo Section -->
             <section class="w-11/12 max-w-[1080px] mx-auto">
                 <div
-                    class="flex flex-row w-[1080px] items-center justify-evenly border border-slate-800 mb-24 gap-y-6 p-8 relative rounded-md">
+                    class="hidden md:flex md:flex-col lg:flex-row items-center justify-evenly border border-slate-800 mb-24 gap-y-6 p-8 relative rounded-md">
                     <p class="font-mullish text-lightGray text-xl">
                         Check out the live demo to learn RazorpayX works.
                         <span class="font-bold">No sign-up required</span>
@@ -733,7 +740,7 @@
                 <img src="./images/dotImage1.png" loading="lazy" width="233px" height="167px"
                     class="absolute -top-[6rem] -right-[2rem] inline-block">
 
-                <div class="w-full grid grid-cols-3 gap-y-10 gap-x-4 relative z-10 mb-10">
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-4 relative z-10 mb-10">
                     <!-- Item 1 -->
                     <div class="relative flex items-center">
                         <h2 class="font-mullish text-deepBlueHead font-extrabold text-4xl leading-[3.375rem]">New in the
@@ -845,7 +852,7 @@
                     amet consectetur adipisicing elit. Expedita tempore blanditiis earum.</p>
 
                 <!-- Cards -->
-                <div class="grid grid-cols-4 mt-8 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8 gap-8">
                     <!-- Card 1 -->
                     <div>
                         <img src="./images/instant-activation-icon-5dc1b16b.svg">
@@ -915,9 +922,9 @@
 
         <!-- Join Razorpay Section -->
         <section class="bg-[#f5f8fe] relative pt-20 pb-12">
-            <div class="mx-auto w-10/12 max-w-[1080px] relative flex flex-row">
+            <div class="mx-auto w-10/12 max-w-[1080px] relative flex flex-col md:flex-row gap-8">
                 <!-- Left Part -->
-                <div class="flex flex-col justify-center max-w-[calc(100%-500px)] items-start">
+                <div class="flex flex-col justify-center md:max-w-[calc(100%-500px)] items-start">
                     <h2 class="font-mullish font-bold text-2xl text-deepBlueHead">Join the 50,00,000+ businesses using
                         Razorpay</h2>
                     <div class="w-6 h-1 bg-greenLight mb-10 my-4"></div>
@@ -929,7 +936,7 @@
                 </div>
 
                 <!-- Right Part -->
-                <div class="h-[500px] w-[500px] relative overflow-y-hidden">
+                <div class="h-[500px] w-[500px] relative overflow-y-hidden mx-auto">
                     <div style="background: linear-gradient(180deg, #f4f8ff, #fff0);"
                         class="absolute w-full h-[150px] top-0 z-50"></div>
                     <img src="./images/companies-f772fc25.png" height="500px" class="absolute object-cover moveImage">
@@ -966,19 +973,19 @@
                 </button>
 
                 <!-- Main Content -->
-                <div class="flex flex-row max-w-[960px] items-center mx-auto my-16 space-x-[10rem]">
+                <div class="flex flex-col xl:flex-row max-w-[960px] items-center mx-auto my-16 space-x-[10rem]">
                     <!-- Left Part -->
                     <img src="./images/testimonial-5d1d25a1.jpg" class="h-[320px] w-[320px] rounded-xl" loading="lazy">
 
                     <!-- Right Part -->
-                    <div class="max-w-[400px]">
-                        <img src="./images/quotes-38b97044.svg" width="35px" height="40px" class="mb-2">
-                        <p class="font-mullish text-3xl font-extralight opacity-80">Readymode CLosed Wallet Solution For
+                    <div class="max-w-[400px] flex flex-col items-center">
+                        <img src="./images/quotes-38b97044.svg" width="35px" height="40px" class="mb-2 xl:order-1 self-start">
+                        <p class="font-mullish text-3xl font-extralight opacity-80 xl:order-1">Readymode CLosed Wallet Solution For
                             Quick Refunds</p>
-                        <a href="#" class="text-lightBlue italic underline">Learn More</a>
-                        <h3 class="font-mullish font-extrabold text-2xl">Lorem Ipsum</h3>
-                        <p class="font-mullish font-medium">CEO, XYZ Engineering Company</p>
-                        <img src="./images/fake-company-logo-6fa447e4.png" loading="lazy" width="80px" height="40px">
+                        <a href="#" class="text-lightBlue italic underline xl:order-1 self-start">Learn More</a>
+                        <h3 class="font-mullish font-extrabold text-2xl xl:order-1 -order-1">Lorem Ipsum</h3>
+                        <p class="font-mullish font-medium xl:order-1 -order-1">CEO, XYZ Engineering Company</p>
+                        <img src="./images/fake-company-logo-6fa447e4.png" loading="lazy" width="80px" height="40px" class="xl:order-1 -order-1 self-center">
                     </div>
 
                 </div>
@@ -1039,13 +1046,13 @@
                 </div>
 
                 <!-- Right Part -->
-                <img src="./images/ctaImg-e340b144.svg" loading="lazy" width="240px" height="282px">
+                <img src="./images/ctaImg-e340b144.svg" loading="lazy" width="240px" height="282px" class="md:block hidden">
             </div>
         </section>
 
         <!-- Footer Section -->
         <footer class="bg-[#edf7ff] relative pt-20 pb-12">
-            <div class="mx-auto w-10/12 max-w-[1080px] relative grid grid-cols-4 gap-10">
+            <div class="mx-auto w-10/12 max-w-[1080px] relative grid grid-cols-2 md:grid-cols-4 gap-10">
                 <div class="flex flex-col gap-4 text-sm font-mullish leading-6 font-[300]">
                     <img src="./images/razorpaylogo.gif" width="120px">
                     <p>
@@ -1074,7 +1081,9 @@
                         <div>
                             <img src="./images/footer-certificate-1-21d2bad2.png" width="100px" height="30px">
                         </div>
-                        <img src="./images/footer-certificate-2-4d9e1626.jpg">
+                        <div>
+                            <img src="./images/footer-certificate-2-4d9e1626.jpg">
+                        </div> 
                     </div>
                 </div>
 
