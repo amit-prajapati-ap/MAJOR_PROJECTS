@@ -9,7 +9,7 @@
     @apply absolute w-full h-1 bg-lightBlue bottom-0 hidden transition-all duration-200
 }
 .navDiv {
-    @apply relative w-[1140px] mx-auto flex items-center justify-between
+    @apply relative w-full max-w-[1140px] xl:mx-auto flex items-center justify-between mx-4
 }
 .navLogIn {
     @apply py-3 px-6 font-mullish text-white border-lightBlue border-2 rounded-sm text-sm font-bold

@@ -18,10 +18,10 @@
     <div class="overflow-x-hidden relative w-full">
 
         <!-- CTA Header -->
-        <section class="flex justify-between relative gap-2">
+        <section class="flex xl:justify-between relative gap-6 justify-center">
 
             <!-- Left Part -->
-            <div class="flex flex-row justify-between">
+            <div class="xl:flex flex-row justify-between hidden">
                 <div class="bg-lightBlue500 w-[50px] skew-x-[30deg] -mx-8"></div>
                 <div class="bg-blue-200 w-[15px] skew-x-[30deg] mx-8"></div>
                 <div class="bg-blue-100 w-[120px] skew-x-[30deg] -mx-8 shadow-md"></div>
@@ -29,7 +29,7 @@
             </div>
 
             <!-- Main Part -->
-            <div class="flex justify-between items-center gap-2 font-mullish py-2">
+            <div class="hidden md:flex justify-between items-center gap-2 font-mullish py-2">
                 <p class="font-[600] text-xl">RazorpayX Payroll: 3 Clicks, Payroll Fixed! Automate payroll now!</p>
                 <button
                     class="text-white bg-lightBlue500 py-3 px-6 font-bold rounded-md cursor-pointer hover:bg-blue-600 hover:text-lightGray">Know
@@ -37,7 +37,7 @@
             </div>
 
             <!-- Right Part -->
-            <div class="flex flex-row justify-between">
+            <div class="xl:flex flex-row justify-between hidden">
                 <div class="bg-blue-100 w-[120px] skew-x-[30deg] shadow-md"></div>
                 <div class="bg-blue-100 w-[120px] skew-x-[30deg] -mr-8 shadow-md"></div>
                 <div class="bg-blue-200 w-[15px] skew-x-[30deg] mx-8"></div>
@@ -54,7 +54,7 @@
                     <img src="./images/razorpaylogo.svg" alt="Razorpay" width="125px" height="30px">
                 </a>
 
-                <ul class="hidden gap-6 lg:flex">
+                <ul class="hidden gap-6 xl:flex">
                     <li class="navList group">
                         <a href="#">Payments</a>
                         <div class="navListUnderline group-hover:block "></div>
@@ -83,14 +83,17 @@
                     </li>
                 </ul>
 
-                <div class="flex space-x-6">
+                <div class="flex space-x-6 justify-between mr-8">
 
-                    <div class="my-auto hidden lg:block">
+                    <div class="my-auto hidden xl:block">
                         <img src="https://framerusercontent.com/images/LE1lFDrQaNpb8cs0KSTC4zTiY.svg" alt="Flag"
                             width="28px" height="20px">
                     </div>
                     <button class="navLogIn block">Log in</button>
-                    <button class="navSignUp hidden lg:block">Sign Up</button>
+                    <button class="navSignUp hidden xl:block">Sign Up</button>
+                    <div class="block xl:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-f53d17a7-d580-4635-9946-d0b70e7b7b3a, rgb(118, 142, 167))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </div>
 
                 </div>
 
@@ -936,7 +939,7 @@
                 </div>
 
                 <!-- Right Part -->
-                <div class="h-[500px] w-[500px] relative overflow-y-hidden mx-auto">
+                <div class="h-[300px] sm:h-[500px] max-h-[500px] w-[80%] max-w-[500px] relative overflow-y-hidden mx-auto">
                     <div style="background: linear-gradient(180deg, #f4f8ff, #fff0);"
                         class="absolute w-full h-[150px] top-0 z-50"></div>
                     <img src="./images/companies-f772fc25.png" height="500px" class="absolute object-cover moveImage">
@@ -956,7 +959,7 @@
 
                 <!-- Left Button -->
                 <button
-                    class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute top-1/2 left-0 flex justify-center items-center">
+                    class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute top-1/2 left-0 hidden sm:flex justify-center items-center">
                     <div
                         class="w-[65%] bg-[#f4f8ff] h-[65%] mix-blend-multiply rounded-full flex justify-center items-center">
                         <i class="fa-solid fa-chevron-left text-gray-400 text-2xl"></i>
@@ -965,7 +968,7 @@
 
                 <!-- Right Button -->
                 <button
-                    class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute top-1/2 right-0 flex justify-center items-center">
+                    class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute top-1/2 right-0 hidden sm:flex justify-center items-center">
                     <div
                         class="w-[65%] bg-[#f4f8ff] h-[65%] mix-blend-multiply rounded-full flex justify-center items-center">
                         <i class="fa-solid fa-chevron-right text-gray-400 text-2xl"></i>
@@ -973,12 +976,12 @@
                 </button>
 
                 <!-- Main Content -->
-                <div class="flex flex-col xl:flex-row max-w-[960px] items-center mx-auto my-16 space-x-[10rem]">
+                <div class="flex flex-col xl:flex-row max-w-[960px] items-center mx-auto my-16 md:space-x-[10rem]]">
                     <!-- Left Part -->
                     <img src="./images/testimonial-5d1d25a1.jpg" class="h-[320px] w-[320px] rounded-xl" loading="lazy">
 
                     <!-- Right Part -->
-                    <div class="max-w-[400px] flex flex-col items-center">
+                    <div class="max-w-[400px] flex flex-col items-center mx-auto">
                         <img src="./images/quotes-38b97044.svg" width="35px" height="40px" class="mb-2 xl:order-1 self-start">
                         <p class="font-mullish text-3xl font-extralight opacity-80 xl:order-1">Readymode CLosed Wallet Solution For
                             Quick Refunds</p>
