@@ -7,3 +7,27 @@
 .ctaFooter {
     background: linear-gradient(145deg, rgb(255, 7, 251), rgb(0, 115, 255));
 }
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Darker background for the scrollbar track */
+    border-radius: 5px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; /* Slightly lighter thumb for contrast */
+    border-radius: 5px; /* Rounded edges for the thumb */
+    border: 2px solid #333; /* Matches the track for a seamless look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Brighter thumb when hovered for better visibility */
+}
+
+/* Optional: Add transition for smooth appearance */
+::-webkit-scrollbar-thumb {
+    transition: background 0.3s ease;
+}
