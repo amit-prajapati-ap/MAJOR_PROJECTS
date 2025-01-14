@@ -60,8 +60,8 @@ function playSong(track, paused = false) {
         playButton.classList.replace("fa-circle-play", "fa-circle-pause");
     }
     document.querySelector(".songInfo").innerHTML = `
-                        <p class="text-xl font-bold mt-2">${track}</p>
-                        <p>Amit Prajapati</p>
+                        <p class="text-sm sm:text-xl font-bold mt-2">${track}</p>
+                        <p class="text-[12px] sm:text-lg">Amit Prajapati</p>
                         `;
 }
 
@@ -140,6 +140,29 @@ async function main() {
         document.querySelector(".seekBar-circle").style.left = `${percent}%`;
 
         currentSong.currentTime = ((currentSong.duration) * percent) / 100;
+    });
+
+    //Add an event listener for hamBurgerShow
+    document.querySelector(".hamBurgerShow").addEventListener("click", () => {
+        document.querySelector(".asideBar").classList.add("asideBarShow");
+        let show = document.querySelector(".hamBurgerShow");
+        let close = document.querySelector(".hamBurgerClose");
+
+        close.classList.add("hamBurgerShow");
+        close.classList.remove("hamBurgerClose");
+        show.classList.add("hamBurgerClose");
+        show.classList.remove("hamBurgerShow");
+    });
+    //Add an event listener for hamBurgerShow
+    document.querySelector(".hamBurgerClose").addEventListener("click", () => {
+        document.querySelector(".asideBar").classList.remove("asideBarShow");
+        let show = document.querySelector(".hamBurgerShow");
+        let close = document.querySelector(".hamBurgerClose");
+
+        close.classList.add("hamBurgerShow");
+        close.classList.remove("hamBurgerClose");
+        show.classList.add("hamBurgerClose");
+        show.classList.remove("hamBurgerShow");
     });
 }
 
