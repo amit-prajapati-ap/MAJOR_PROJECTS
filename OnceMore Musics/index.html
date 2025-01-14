@@ -55,7 +55,7 @@
         </nav>
 
         <!-- Content Section -->
-        <div class="w-full h-full flex justify-between my-1 mx-3 gap-3">
+        <div class="w-full h-[80%] flex justify-between my-1 mx-3 gap-3">
             <!-- Aside Bar Section -->
             <div class="bg-asideBG flex flex-col justify-between min-w-[350px] max-w-[350px] rounded-md">
                 <!-- Header Div -->
@@ -73,23 +73,8 @@
                         <!-- Right Section -->
                         <div class="text-gray-400 text-3xl cursor-pointer">+</div>
                     </div>
-                    <!-- Card1 -->
-                    <div class="text-white p-4 bg-zinc-800 mx-3 rounded-lg">
-                        <h4 class="text-lg font-bold">Create your first playlist</h4>
-                        <p class="font-bold text-sm">It's easy, we'll help you</p>
-                        <button
-                            class="mt-6 px-4 py-1 rounded-full bg-white text-black font-bold cursor-pointer hover:scale-105 hover:opacity-90">Create
-                            playlist</button>
-                    </div>
 
-                    <!-- Card2 -->
-                    <div class="text-white p-4 bg-zinc-800 mx-3 rounded-lg">
-                        <h4 class="text-lg font-bold">Let's find some podcasts to follow</h4>
-                        <p class="font-bold text-sm">We'll keep you updated on new episodes</p>
-                        <button
-                            class="mt-6 px-4 py-1 rounded-full bg-white text-black font-bold cursor-pointer hover:scale-105 hover:opacity-90">Become
-                            podcasts</button>
-                    </div>
+                    <ul class="songList flex flex-col gap-4"></ul>
                 </div>
 
                 <!-- Footer Div -->
@@ -126,7 +111,7 @@
                     class="absolute w-full h-[400px] top-0 z-50 opacity-30 rounded-t-2xl"></div>
 
                 <!-- Main Content -->
-                <div class="z-10 content flex flex-col justify-between w-full h-full p-5 gap-8 max-w-[1440px]">
+                <div class="z-10 content flex flex-col justify-between w-full h-full p-5 gap-8 max-w-[1440px] relative">
                     <!-- Songs -->
                     <div class="flex flex-col gap-5 w-full h-full">
                         <!-- Type 1 -->
@@ -187,28 +172,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- PlayBar -->
-                        <div
-                            class="playbar absolute left-0 bottom-0 bg-green-400 w-full py-4 px-8 flex justify-center text-black">
-
-                            <!-- Song Info -->
-                            <div class="songInfo">
-
-                            </div>
-
-                            <!-- Song Buttons -->
-                            <div class="songButtons space-x-16 text-[40px]">
-                                <i class="fa-solid fa-backward-step cursor-pointer"></i>
-                                <i class="fa-solid fa-play cursor-pointer"></i>
-                                <!-- <i class="fa-solid fa-pause cursor-pointer"></i> -->
-                                <i class="fa-solid fa-forward-step cursor-pointer"></i>
-                            </div>
-
-                            <!-- Song Time -->
-                            <div class="songTime">
-
-                            </div>
-                        </div>
                     </div>
 
                     <!-- Footer -->
@@ -217,24 +180,60 @@
                     </div>
                 </div>
 
+                <!-- PlayBar -->
+                <div
+                    class="playbar bg-white absolute left-0 bottom-0 w-full py-3 px-8 flex justify-between items-center text-black rounded-sm gap-1 max-h-[90px] z-20 pt-6">
+
+                    <!-- Seek Bar -->
+                    <div class="seekBar border-4 border-blue-600 my-1 rounded-full w-[90%] absolute top-2 cursor-pointer">
+                        <div
+                            class="seekBar-circle left-0 bottom-[-12px] border-[13px] absolute rounded-full border-gray-700 max-w-[100%] w-[10px]">
+                        </div>
+
+                        <!-- Song Time -->
+                        <div class="songTime absolute right-0 text-xl top-2 font-[500]">
+                            <p>00:00 / 00:00</p>
+                        </div>
+                    </div>
+
+                    <!-- Song Info -->
+                    <div class="songInfo leading-3 ml-1">
+                        <p class="text-xl font-bold mt-2">Song name</p>
+                        <p>Song author</p>
+                    </div>
+
+                    <!-- Song Buttons -->
+                    <div
+                        class="songButtons absolute left-[50%] translate-x-[-50%] space-x-16 text-[30px] flex place-items-center mt-3">
+                        <i class="fa-solid fa-backward-step cursor-pointer" id="prev"></i>
+                        <i class="fa-regular fa-circle-play text-[50px] cursor-pointer" id="play"></i>
+                        <i class="fa-solid fa-forward-step cursor-pointer" id="next"></i>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
-        <!-- CTA Section -->
-        <section class="ctaFooter flex justify-between p-4 m-3 rounded-lg text-white">
-            <!-- left Part -->
-            <div class="w-[70%]">
-                <h3 class="font-bold text-lg">Preview of OnceMore Musics</h3>
-                <p class="font-[500]">Sign up to get unlimited songs and podcasts with occassional ads. No credit card
-                    needed.</p>
-            </div>
+        <!-- CTO Section -->
+        <div>
+            <!-- CTA Section -->
+            <section class="ctaFooter flex justify-between p-4 m-3 rounded-lg text-white">
+                <!-- left Part -->
+                <div class="w-[70%]">
+                    <h3 class="font-bold text-lg">Preview of OnceMore Musics</h3>
+                    <p class="font-[500]">Sign up to get unlimited songs and podcasts with occassional ads. No credit
+                        card
+                        needed.</p>
+                </div>
 
-            <!-- Right Part -->
-            <button
-                class="transition-all duration-200 opacity-100 hover:opacity-80 font-bold mx-4 py-4 px-8 bg-white text-black rounded-full">Sign
-                up for free</button>
-        </section>
+                <!-- Right Part -->
+                <button
+                    class="transition-all duration-200 opacity-100 hover:opacity-80 font-bold mx-4 py-4 px-8 bg-white text-black rounded-full">Sign
+                    up for free</button>
+            </section>
+        </div>
 
     </div>
 
