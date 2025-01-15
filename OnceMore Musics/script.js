@@ -1,36 +1,40 @@
 let playButton = document.getElementById("play");
 let prevButton = document.getElementById("prev");
 let nextButton = document.getElementById("next");
+let songUL;
+let songs;
+let currFolder;
 let currentSong = new Audio();
 let totalDuration = "";
 
 //Getting songs from "songs" folder
-async function getSongs() {
-    let a = await fetch("http://192.168.40.89:5500/songs");
+async function getSongs(folder) {
+    currFolder = folder;
+    let a = await fetch(`http://192.168.40.89:5501/${currFolder}`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
     let as = div.getElementsByTagName("a");
-    let songs = [];
+    songs = [];
     for (let i = 0; i < as.length; i++) {
         const element = as[i];
         if (element.href.endsWith(".mp3")) {
             songs.push(element.href);
         }
     }
-    return songs;
 }
 
 // Showing all Songs in the Library field
 function showSongsInLibrary(songs) {
-    let songUL = document.querySelector(".songList");
+    songUL = document.querySelector(".songList");
     let flag = true;
     for (const song of songs) {
-        let name = (song.replace("http://localhost:5173/songs/", "").replace(".mp3", "")).replaceAll("_", " ");
+        let name = (song.replace(`http://localhost:5173/${currFolder}/`, "").replace(".mp3", "")).replaceAll("_", " ");
         let upperName = name.toUpperCase();
         if (flag) {
+            flag = false;
             playSong(upperName, true);
-            document.querySelector(".songTime").innerHTML = `<p>00:00 / ${formatTime(currentSong.duration)}</p>`;
+            document.querySelector(".songTime").innerHTML = `<p>00:00 / 00:00</p>`;
         }
         songUL.innerHTML = songUL.innerHTML + `
         <li class="text-white p-4 bg-zinc-800 transition-all duration-300 hover:bg-zinc-700 mx-3 rounded-lg flex justify-between items-center gap-4 cursor-pointer">
@@ -52,7 +56,7 @@ function showSongsInLibrary(songs) {
 
 // Playing the songs
 function playSong(track, paused = false) {
-    let audioFile = `http://localhost:5173/songs/${track.replaceAll(" ", "_").toLowerCase()}.mp3`;
+    let audioFile = `http://localhost:5173/${currFolder}/${track.replaceAll(" ", "_").toLowerCase()}.mp3`;
 
     currentSong.src = audioFile;
     if (!paused) {
@@ -61,7 +65,7 @@ function playSong(track, paused = false) {
     }
     document.querySelector(".songInfo").innerHTML = `
                         <p class="text-sm sm:text-xl font-bold mt-2">${track}</p>
-                        <p class="text-[12px] sm:text-lg">Amit Prajapati</p>
+                        <p class="song-author text-[12px] sm:text-lg">Amit Prajapati</p>
                         `;
 }
 
@@ -96,7 +100,7 @@ function timeUpdate(current, total) {
 // Main Function 
 async function main() {
     //Getting the list of Available songs
-    let songs = await getSongs();
+    songs = await getSongs("songs/ncs");
     showSongsInLibrary(songs);
 
     //Attach an event listerner to each song
@@ -108,7 +112,7 @@ async function main() {
         })
     });
 
-    //Attach am event listener to play, next and previous
+    //Attach am event listener to play
     playButton.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play();
@@ -125,7 +129,7 @@ async function main() {
     //Listen for timeUpdate event
     currentSong.addEventListener("timeupdate", (a) => {
 
-        if(currentSong.currentTime == currentSong.duration) {
+        if (currentSong.currentTime == currentSong.duration) {
             playButton.classList.replace("fa-circle-pause", "fa-circle-play");
         }
         timeUpdate(formatTime(currentSong.currentTime), formatTime(currentSong.duration));
@@ -135,7 +139,7 @@ async function main() {
 
     //Add an event listener to seekbar
     document.querySelector(".seekBar").addEventListener("click", (e) => {
-        let percent = (e.offsetX/(e.target.getBoundingClientRect().width)) * 100;
+        let percent = (e.offsetX / (e.target.getBoundingClientRect().width)) * 100;
 
         document.querySelector(".seekBar-circle").style.left = `${percent}%`;
 
@@ -153,7 +157,8 @@ async function main() {
         show.classList.add("hamBurgerClose");
         show.classList.remove("hamBurgerShow");
     });
-    //Add an event listener for hamBurgerShow
+
+    //Add an event listener for hamBurgerClose
     document.querySelector(".hamBurgerClose").addEventListener("click", () => {
         document.querySelector(".asideBar").classList.remove("asideBarShow");
         let show = document.querySelector(".hamBurgerShow");
@@ -163,6 +168,67 @@ async function main() {
         close.classList.remove("hamBurgerClose");
         show.classList.add("hamBurgerClose");
         show.classList.remove("hamBurgerShow");
+    });
+
+    // Adding Event Listener to previous and next buttons
+    prevButton.addEventListener("click", () => {
+        let index = songs.indexOf(currentSong.src);
+        if (index > 0) {
+            let name = (songs[index - 1].replace(`http://localhost:5173/${currFolder}/`, "").replace(".mp3", "")).replaceAll("_", " ");
+            let upperName = name.toUpperCase();
+            playSong(upperName);
+        }
+        else {
+            let name = (songs[index].replace(`http://localhost:5173/${currFolder}/`, "").replace(".mp3", "")).replaceAll("_", " ");
+            let upperName = name.toUpperCase();
+            playSong(upperName);
+        }
+    });
+
+    nextButton.addEventListener("click", () => {
+        let index = songs.indexOf(currentSong.src);
+        if (index < songs.length - 1) {
+            let name = (songs[index + 1].replace(`http://localhost:5173/${currFolder}/`, "").replace(".mp3", "")).replaceAll("_", " ");
+            let upperName = name.toUpperCase();
+            playSong(upperName);
+        }
+        else {
+            let name = (songs[0].replace(`http://localhost:5173/${currFolder}/`, "").replace(".mp3", "")).replaceAll("_", " ");
+            let upperName = name.toUpperCase();
+            playSong(upperName);
+        }
+    });
+
+    //Add an event to volume
+    document.querySelector("#volume-range").addEventListener("change", (e) => {
+        currentSong.volume = parseInt(e.target.value) / 100;
+        if (e.target.value > 50) {
+            document.querySelector(".volume-icon").classList.add("fa-volume-high");
+            document.querySelector(".volume-icon").classList.remove("fa-volume-low");
+            document.querySelector(".volume-icon").classList.remove("fa-volume-xmark");
+        }
+        else if (e.target.value < 50 && e.target.value > 0) {
+            document.querySelector(".volume-icon").classList.add("fa-volume-low");
+            document.querySelector(".volume-icon").classList.remove("fa-volume-high");
+            document.querySelector(".volume-icon").classList.remove("fa-volume-xmark");
+        }
+        else if (e.target.value < 10) {
+            document.querySelector(".volume-icon").classList.add("fa-volume-xmark");
+            document.querySelector(".volume-icon").classList.remove("fa-volume-low");
+            document.querySelector(".volume-icon").classList.remove("fa-volume-high");
+        }
+    });
+
+    //Add an event to volume icon
+    document.querySelector(".volume-icon").addEventListener("click", () => {
+        document.querySelector("#volume-range").classList.toggle("hidden");
+    });
+
+    //Load the playlist card is clicked
+    Array.from(document.getElementsByClassName("card")).forEach((e) => {
+        e.addEventListener("click", async item => {
+            await getSongs(`songs/${item.currentTarget.dataset.folder}`);
+        });
     });
 }
 
