@@ -59,3 +59,77 @@
 .hamBurgerClose {
     display: none;
 }
+@media screen and (max-width: 550px) {
+    .cards {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: start;
+    }
+    .card {
+      width: 100%;
+      max-width: 100%;
+      align-items: center;
+      max-height: 100%;
+      padding: 10px 0;
+    }
+    .card-info {
+      text-align: center;
+      max-width: 80%;
+      margin-top: -20px;
+      margin-bottom: 20px;
+    }
+    .playlist-header h2 {
+      font-size: 1.6rem;
+    }
+    .playlist-header p {
+      font-size: 1rem;
+    }
+    .playbar {
+      align-items: start;
+      height: 120px;
+      padding-top: 2px;
+    }
+    .seekBar {
+      top: 2.5rem;
+    }
+    .songInfo {
+      display: flex;
+    }
+    .song-author {
+      margin-top: 0.7rem;
+      margin-left: 0.5rem;
+    }
+    .songButtons {
+      top: 3.2rem;
+      left: 2rem;
+      transform: translateX(0);
+    }
+    .time-volume {
+      top: 3.5rem;
+      right: 30px;
+    }
+}
+
+input[type='range'] {
+  overflow: hidden;
+  width: 140px;
+  -webkit-appearance: none;
+  background-color: #9a905d;
+  border-radius: 10px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 20px;
+  -webkit-appearance: none;
+  color: orange;
+  margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 20px;
+  background: #434343;
+  box-shadow: -80px 0 0 80px orange;
+}
