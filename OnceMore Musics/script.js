@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Showing all Songs in the Library field
     function showSongsInLibrary(songs) {
+        document.querySelector(".Library-Heading").innerHTML = (currFolder.split("/")[1]).replace("_"," ");
+
         playButton.classList.replace("fa-circle-pause", "fa-circle-play");
         songUL = document.querySelector(".songList");
         songUL.innerHTML = "";
@@ -113,7 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function musicControls() {
         // Adding Event Listener to previous and next buttons
         prevButton.addEventListener("click", () => {
-            let index = songs.indexOf((currentSong.src.replace("http://localhost:5173/", "")));
+            document.querySelector(".seekBar-circle").style.left = "0";
+            const startIndex = currentSong.src.indexOf("songs/");
+            const extractedPath = currentSong.src.substring(startIndex);
+            let index = songs.indexOf(extractedPath);
             if (index > 0) {
                 let name = (songs[index - 1].replace(`${currFolder}/`, "").replace(".mp3", "")).replaceAll("_", " ");
                 let upperName = name.toUpperCase();
@@ -127,7 +132,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         nextButton.addEventListener("click", () => {
-            let index = songs.indexOf((currentSong.src.replace("http://localhost:5173/", "")));
+            document.querySelector(".seekBar-circle").style.left = "0";
+            const startIndex = currentSong.src.indexOf("songs/");
+            const extractedPath = currentSong.src.substring(startIndex);
+            let index = songs.indexOf(extractedPath);
             if (index < songs.length - 1) {
                 let name = (songs[index + 1].replace(`${currFolder}/`, "").replace(".mp3", "")).replaceAll("_", " ");
                 let upperName = name.toUpperCase();
@@ -242,6 +250,10 @@ document.addEventListener("DOMContentLoaded", () => {
         //Load the playlist card is clicked
         Array.from(document.getElementsByClassName("card")).forEach((e) => {
             e.addEventListener("click", async item => {
+                document.querySelector(".songList").innerHTML = `
+                    <span class="loader text-white text-2xl font-bold mx-auto">Loading...</span>
+                `;
+                document.querySelector(".seekBar-circle").style.left = "0";
                 await getSongs(`songs/${item.currentTarget.dataset.folder}`);
                 showSongsInLibrary(songs);
 
@@ -257,21 +269,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function displayAlbums() {
-        let a = await fetch(`http://192.168.40.89:5501/songs/`);
-        let response = await a.text();
-        let div = document.createElement("div");
-        div.innerHTML = response;
-        let anchors = div.getElementsByTagName("a");
+        let response = await fetch("songs/songsFolders.json");
+        let dataFolder = await response.json();
         let cardContainer = document.querySelector(".cards");
-        let array = Array.from(anchors);
-        for (let index = 0; index < array.length; index++) {
-            const e = array[index];
-            if (e.href.includes("/songs/")) {
-                let folder = e.href.split("/").slice(-1)[0];
-                let response = await fetch(`songs/${folder}/info.json`);
-                let data = await response.json();
+        cardContainer.innerHTML = "";
+        for (let folder = 0; folder < dataFolder.folders.length; folder++) {
+            let response = await fetch(`songs/${dataFolder.folders[folder]}/info.json`);
+            let data = await response.json();
 
-                cardContainer.innerHTML += `
+            cardContainer.innerHTML += `
                 <!-- Card -->
                                 <div data-folder="${data.dataSet}"
                                     class="card flex flex-col gap-7 p-5 w-[25%] max-w-[250px] min-w-[220px] rounded-lg hover:bg-neutral-950 transition-all duration-400 group max-h-[370px]">
@@ -293,7 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                 </div>
             `;
-            }
-        };
+        }
     }
 });

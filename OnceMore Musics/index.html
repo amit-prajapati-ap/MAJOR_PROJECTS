@@ -89,14 +89,13 @@
                             class="flex gap-3 items-center cursor-pointer hover:text-white transition-all duration-300 group">
                             <img src="assets/librarylogo.svg" width="25px"
                                 class="invert opacity-70 group-hover:opacity-100 transition-all duration-300">
-                            <h3 class="font-bold">Your Library</h3>
+                            <h3 class="Library-Heading font-bold">Your Library</h3>
                         </div>
-
-                        <!-- Right Section -->
-                        <div class="text-gray-400 text-3xl cursor-pointer">+</div>
                     </div>
 
-                    <ul class="songList flex flex-col gap-4"></ul>
+                    <ul class="songList flex flex-col gap-4">
+                        <span class="loader text-white text-2xl font-bold mx-auto">Loading...</span>
+                    </ul>
                 </div>
 
                 <!-- Footer Div -->
@@ -141,13 +140,12 @@
                             <!-- Header -->
                             <div class="playlist-header flex justify-between items-center">
                                 <h2 class="text-white font-bold text-3xl">OnceMore Playlist</h2>
-                                <p
-                                    class="cursor-pointer font-bold text-xl hover:text-white transition-all duration-300">
-                                    Show all</p>
                             </div>
 
                             <!-- Playlists -->
-                            <div class="cards flex flex-wrap gap-2 items-start overflow-y-auto h-full"></div>
+                            <div class="cards flex flex-wrap gap-2 items-start overflow-y-auto h-[80%]">
+                                <span class="relative text-white font-bold text-3xl left-[50%] translate-x-[-50%]">Loading...</span>
+                            </div>
                         </div>
                     </div>
                 </div>

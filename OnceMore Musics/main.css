@@ -65,6 +65,7 @@
       flex-wrap: nowrap;
       align-items: center;
       justify-content: start;
+      max-height: 60vh;
     }
     .card {
       width: 100%;
