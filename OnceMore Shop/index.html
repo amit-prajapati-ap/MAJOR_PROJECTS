@@ -16,11 +16,15 @@
     <script src="script.js"></script>
 </head>
 
-<body class="bg-slate-100 w-full h-full">
-    <div class="container w-full h-full max-w-[95vw] mx-auto">
+<body class="bg-slate-100 w-full h-full font-mullish">
+    <div class="container w-full h-full max-w-[100vw] mx-auto">
+
+        <!-- Header Part -->
         <header class="section-navbar w-full h-[120px] flex flex-col bg-white">
+
+            <!-- CTO top -->
             <section class="top-txt w-full h-[40%] bg-gray-800 flex">
-                <div class="head-container w-[70%] max-w-[1080px] mx-auto flex justify-between items-center">
+                <div class="maxContainer flex justify-between items-center">
                     <div class="head-txt text-lightGray font-bold">
                         <p>Free shipping, 30-day return or refund guarantee.</p>
                     </div>
@@ -30,7 +34,387 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Navigation Bar -->
+            <div class="maxContainer h-[60%] flex justify-between gap-4 items-center">
+                <!-- Left Part -->
+                <div>
+                    <a href="index.html">
+                        <img src="assets/text_logo.png" alt="OnceMore Shop" width="150px" class="logo">
+                    </a>
+                </div>
+
+                <!-- Right Part -->
+                <div>
+                    <ul class="flex gap-3 items-center">
+                        <li>
+                            <a href="/" class="group relative hover:text-lightBlue500">Home
+                                <div
+                                    class="h-[2px] bg-lightBlue500 absolute bottom-[-1] left-0 w-0 transition-all duration-300 group-hover:w-full">
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/" class="group relative hover:text-lightBlue500">About
+                                <div
+                                    class="h-[2px] bg-lightBlue500 absolute bottom-[-1] left-0 w-0 transition-all duration-300 group-hover:w-full">
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/" class="group relative hover:text-lightBlue500">Products
+                                <div
+                                    class="h-[2px] bg-lightBlue500 absolute bottom-[-1] left-0 w-0 transition-all duration-300 group-hover:w-full">
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/" class="group relative hover:text-lightBlue500">Contact
+                                <div
+                                    class="h-[2px] bg-lightBlue500 absolute bottom-[-1] left-0 w-0 transition-all duration-300 group-hover:w-full">
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="bg-gray-700 text-white rounded-md py-2 px-5 ml-4">
+                            <a href="/" class="flex items-center gap-4" id="cartValue">
+                                <i class="fa-solid fa-cart-shopping text-sm"></i>
+                                <p>0</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
+
+        <!-- Main Part -->
+        <main class="w-full h-full">
+            <!-- Home hero Section -->
+            <section class="home-hero w-full h-[600px] relative">
+                <div class="maxContainer grid grid-cols-2 items-center h-full gap-10">
+                    <!-- Left Part -->
+                    <div class="flex flex-col justify-between gap-8">
+                        <p class="text-[0.8rem] text-blue-900 tracking-wider font-bold">EXPLORE THE LATEST IN TECH
+                            INDUSTRIES</p>
+                        <h1 class="font-extrabold text-4xl text-blue-900 leading-[3.1rem]">
+                            <span>Your Destination for</span>
+                            <span>Cutting-Edge Gadgets!</span>
+                        </h1>
+                        <p class="text-lightGray text-[0.8rem]">
+                            Welcome to OnceMore E-commerce store, your ultimate destination for cutting-edge gadgets!
+                            Explore the latest in the tech innovation and style with us. Shop now and discover a world
+                            of possibilities!
+                        </p>
+                        <button class="px-6 py-2 bg-gray-800 text-white w-[210px]">Explore our Products</button>
+                    </div>
+
+                    <!-- Right Part -->
+                    <div>
+                        <figure>
+                            <img src="assets/appliances.png" class="scale-x-[-1]">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="custom-shape-divider-bottom-1737204177">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                        preserveAspectRatio="none">
+                        <path
+                            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                            opacity=".25" class="shape-fill"></path>
+                        <path
+                            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                            opacity=".5" class="shape-fill"></path>
+                        <path
+                            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                            class="shape-fill"></path>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Extra Product Section -->
+            <section class="w-full mt-12 mb-4">
+                <!-- Cards -->
+                <div class="maxContainer grid grid-cols-3 text-black gap-4">
+                    <!-- Card 1 -->
+                    <div
+                        class="flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
+                        <!-- Left Part -->
+                        <div class="mb-8 flex flex-col justify-between">
+                            <p class="text-gray-500 text-sm font-bold">New Year Sale</p>
+                            <h3 class="text-black text-lg font-bold mb-2">Get and extra 50% off</h3>
+                            <a href="#" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
+                        </div>
+
+                        <!-- Right Part -->
+                        <div class="self-center">
+                            <img src="assets/laptop.png" width="180px">
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
+                        <!-- Left Part -->
+                        <div class="mb-8 flex flex-col justify-between">
+                            <p class="text-gray-500 text-sm font-bold">New Year Sale</p>
+                            <h3 class="text-black text-lg font-bold mb-2">Get and extra 50% off</h3>
+                            <a href="#" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
+                        </div>
+
+                        <!-- Right Part -->
+                        <div class="self-center">
+                            <img src="assets/laptop.png" width="180px">
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
+                        <!-- Left Part -->
+                        <div class="mb-8 flex flex-col justify-between">
+                            <p class="text-gray-500 text-sm font-bold">New Year Sale</p>
+                            <h3 class="text-black text-lg font-bold mb-2">Get and extra 50% off</h3>
+                            <a href="#" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
+                        </div>
+
+                        <!-- Right Part -->
+                        <div class="self-center">
+                            <img src="assets/laptop.png" width="180px">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Policy -->
+            <section class="w-full">
+                <!-- Cards -->
+                <div class="maxContainer grid grid-cols-4 bg-white">
+                    <!-- Card 1 -->
+                    <div class="flex gap-5 pt-14 pb-6 items-center pl-8">
+                        <div class="text-purple-700 text-xl">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <p class="font-bold text-gray-600 text-sm">Worldwide Shipping</p>
+                            <p class="text-[0.7rem] text-gray-400 font-bold">Order Above $100</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="flex gap-5 pt-14 pb-6 items-center pl-8">
+                        <div class="text-purple-700 text-xl">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <p class="font-bold text-gray-600 text-sm">Easy 30 day Returns</p>
+                            <p class="text-[0.7rem] text-gray-400 font-bold">Back Returns in 7 Days</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="flex gap-5 pt-14 pb-6 items-center pl-8">
+                        <div class="text-purple-700 text-xl">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <p class="font-bold text-gray-600 text-sm">Money Back Guarantee</p>
+                            <p class="text-[0.7rem] text-gray-400 font-bold">Guarantee Within 30-Days</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="flex gap-5 pt-14 pb-6 items-center pl-8 pr-4">
+                        <div class="text-purple-700 text-xl">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <p class="font-bold text-gray-600 text-sm">Easy Online Support</p>
+                            <p class="text-[0.7rem] text-gray-400 font-bold">24/7 Any Time Support</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why choose us Section -->
+            <section class="w-full my-12 flex flex-col gap-10">
+                <!-- Heading Part -->
+                <div class="maxContainer flex flex-col text-black">
+                    <h2 class="text-2xl font-bold">Why Choose OnceMore Shop</h2>
+                    <p class="opacity-80 my-2">
+                        Choose OnceMore Shop for a holistic, enriching shopping experience that
+                        gives you to quality and effective price products.
+                    </p>
+                </div>
+
+                <!-- Main Part -->
+                <div class="maxContainer grid-cols-3 grid gap-5 text-black">
+                    <!-- Left Part -->
+                    <!-- Cards -->
+                    <div class="flex flex-col justify-between gap-6">
+                        <!-- Card 1 -->
+                        <div class="flex flex-col items-end gap-1">
+                            <p class="rounded-full px-7 py-5 bg-blue-100 text-2xl text-blue-800">1</p>
+                            <h3 class="text-xl font-bold">Expert Instructors</h3>
+                            <p class="opacity-80">
+                                Learn from experienced teachers who are passionate about sharing
+                                knowledge and guiding you toward success in your learning journey.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex flex-col items-end gap-1">
+                            <p class="rounded-full px-7 py-5 bg-blue-100 text-2xl text-blue-800">2</p>
+                            <h3 class="text-xl font-bold">Expert Instructors</h3>
+                            <p class="opacity-80">
+                                Learn from experienced teachers who are passionate about sharing
+                                knowledge and guiding you toward success in your learning journey.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex flex-col items-end gap-1">
+                            <p class="rounded-full px-7 py-5 bg-blue-100 text-2xl text-blue-800">3</p>
+                            <h3 class="text-xl font-bold">Expert Instructors</h3>
+                            <p class="opacity-80">
+                                Learn from experienced teachers who are passionate about sharing
+                                knowledge and guiding you toward success in your learning journey.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Center Part -->
+                    <div class="flex justify-center items-center">
+                        <figure>
+                            <img src="assets/cards_center.png" loading="lazy" width="400px">
+                        </figure>
+                    </div>
+
+                    <!-- Right Part -->
+                    <!-- Cards -->
+                    <div class="flex flex-col justify-between gap-6">
+                        <!-- Card 3 -->
+                        <div class="flex flex-col items-end gap-1">
+                            <p class="rounded-full px-7 py-5 bg-blue-100 text-2xl text-blue-800">4</p>
+                            <h3 class="text-xl font-bold">Expert Instructors</h3>
+                            <p class="opacity-80">
+                                Learn from experienced teachers who are passionate about sharing
+                                knowledge and guiding you toward success in your learning journey.
+                            </p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flex flex-col items-end gap-1">
+                            <p class="rounded-full px-7 py-5 bg-blue-100 text-2xl text-blue-800">5</p>
+                            <h3 class="text-xl font-bold">Expert Instructors</h3>
+                            <p class="opacity-80">
+                                Learn from experienced teachers who are passionate about sharing
+                                knowledge and guiding you toward success in your learning journey.
+                            </p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="flex flex-col items-end gap-1">
+                            <p class="rounded-full px-7 py-5 bg-blue-100 text-2xl text-blue-800">6</p>
+                            <h3 class="text-xl font-bold">Expert Instructors</h3>
+                            <p class="opacity-80">
+                                Learn from experienced teachers who are passionate about sharing
+                                knowledge and guiding you toward success in your learning journey.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Part -->
+        <footer class="relative">
+            <!-- Contact Section -->
+            <section
+                class="max-w-[1440px] mx-auto w-[50%] bg-white text-black pb-4 pt-8 pl-16 absolute top-[-120px] right-[25%] rounded-md">
+                <div class="grid grid-cols-2 gap-6 items-center">
+                    <div class="flex flex-col gap-2">
+                        <h2 class="text-xl font-bold">Let's revolutionize the way you study</h2>
+                        <p class="opacity-80 my-2">Join our free bootcamps to know us better</p>
+                        <div class="py-2 px-4 bg-lightBlue500 text-white rounded-md w-[150px]">
+                            <a href="contact.html" class="btn flex justify-center items-center gap-1">Start now <i
+                                    class="fa-solid fa-arrow-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="assets/contactUs.png" width="200px">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <section class="bg-gray-800 text-lightGray mt-[200px]">
+                <div class="maxContainer pb-10 pt-32 flex gap-6">
+
+                    <ul class="flex flex-col gap-6 w-[40%]">
+                        <li class="w-[300px]">
+                            <div>
+                                <a href="index.html">
+                                    <img src="assets/text_logo.png" alt="OnceMore Shop" width="150px" class="logo">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="w-full">
+                            <p>Welcome to OnceMore Shop, your ultimate destination for shopping experience!</p>
+                        </li>
+                        <li class="w-[140px]">
+                            <ul class="flex gap-1 justify-between">
+                                <li>
+                                    <img src="assets/facebook-icon-2b65a866.svg">
+                                </li>
+                                <li>
+                                    <img src="assets/twitter-icon-82cbd3e5.svg">
+                                </li>
+                                <li>
+                                    <img src="assets/github-icon-e2d5f6a2.svg">
+                                </li>
+                                <li>
+                                    <img src="assets/instagram-icon-6c2b0c16.svg">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="flex justify-between w-[60%]">
+
+                        <ul class="flex flex-col gap-4">
+                            <li class="font-bold text-lg">SHOPPING</li>
+                            <li class="opacity-80">Computer Store</li>
+                            <li class="opacity-80">Laptop Store</li>
+                            <li class="opacity-80">Accessories</li>
+                            <li class="opacity-80">Sales & Discount</li>
+                        </ul>
+
+                        <ul class="flex flex-col gap-4">
+                            <li class="font-bold text-lg">EXPERIENCE</li>
+                            <li class="opacity-80">Contact Us</li>
+                            <li class="opacity-80">Payment Method</li>
+                            <li class="opacity-80">Delivery</li>
+                            <li class="opacity-80">Return and Exchange</li>
+                        </ul>
+
+                        <ul class="flex flex-col gap-4 w-[35%]">
+                            <li class="font-bold text-lg">NEWSLETTER</li>
+                            <li class="opacity-80">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, omnis?</p>
+                            </li>
+                            <li class="flex gap-4">
+                                <input type="email" id="email" placeholder="Your Email" class="rounded-md bg-gray-900 px-3 w-[170px] outline-none">
+                                <div class="py-2 px-4 bg-lightBlue500 text-white rounded-md w-[150px]">
+                                    <a href="contact.html" class="btn flex justify-center items-center gap-1">Submit</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+        </footer>
+
     </div>
 </body>
 

@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.maxContainer {
+    @apply w-[80%] max-w-[1440px] mx-auto
+}
+.home-hero {
+    background: linear-gradient(30deg, rgb(0, 98, 255), white);
+}
+.custom-shape-divider-bottom-1737204177 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1737204177 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+}
+
+.custom-shape-divider-bottom-1737204177 .shape-fill {
+    fill: #FFFFFF;
+}
