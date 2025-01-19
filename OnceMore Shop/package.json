@@ -2,6 +2,7 @@
   "name":"oncemoreshop",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "build": "vite build"

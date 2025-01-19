@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/cafca8990a.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </head>
 
 <body class="bg-slate-100 w-full h-full font-mullish">
@@ -82,7 +82,7 @@
                         <li class="bg-gray-700 text-white rounded-md py-2 px-5 ml-4">
                             <a href="/" class="flex items-center gap-4" id="cartValue">
                                 <i class="fa-solid fa-cart-shopping text-sm"></i>
-                                <p>0</p>
+                                <p class="headerCartButton">0</p>
                             </a>
                         </li>
                     </ul>
@@ -187,7 +187,7 @@
                 </div>
             </section>
 
-            <!-- Policy -->
+            <!-- Policy Section-->
             <section class="w-full">
                 <!-- Cards -->
                 <div class="maxContainer grid grid-cols-4 bg-white">
@@ -233,6 +233,79 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Product Section -->
+            <section class="w-full my-12">
+                <!-- Product header -->
+                <div class="maxContainer mb-8">
+                    <div class="text-3xl font-bold text-center">
+                        Checkout OnceMore Shop
+                    </div>
+                </div>
+
+                <!-- Product Content -->
+                <section class="w-full">
+                    <!-- Cards -->
+                    <div id="productContainer" class="maxContainer grid grid-cols-3 justify-between gap-12"></div>
+                </section>
+            </section>
+
+            <!-- Products Template Section -->
+            <template id="productTemplate">
+
+                <!-- Card 1 -->
+                <div id="cardValue" class="bg-white rounded-lg">
+                    <article class="card flex flex-col justify-between p-4 h-full relative">
+                        <div class="category rounded-full py-1 px-4 bg-red-100 text-red-500 absolute">Computers
+                        </div>
+
+                        <div class="imageContainer my-2 h-[30%] mt-16">
+                            <img src="assets/laptop.png" class="productImage h-full mx-auto">
+                        </div>
+
+                        <h2 class="productName font-bold text-[1.7rem]">Laptop</h2>
+
+                        <div class="productRating text-yellow-400 text-[0.6rem]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="productDescription opacity-70 my-2 leading-tight">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem in
+                            laboriosam eligendi.
+                        </p>
+
+                        <div class="productPriceElement flex justify-start gap-3 opacity-95 text-lg my-2">
+                            <p class="productPrice">₹999.99</p>
+                            <p class="productActualPrice line-through">₹3999</p>
+                        </div>
+
+                        <div class="productStockElement flex gap-3 my-2 opacity-90">
+                            <p class="productProperty">Total STocks Available:</p>
+                            <p class="productStock">50</p>
+                        </div>
+
+                        <div class="productQuantityElement flex justify-between gap-3 items-center w-full">
+                            <p class="productProperty opacity-90">Quantity(Pieces)</p>
+                            <div
+                                class="stockElement w-full grid grid-cols-3 items-center justify-center text-lg border border-gray-400">
+                                <button class="cartIncrement py-1 px-2 border-r border-gray-400">+</button>
+                                <p class="productQuantity py-1 text-center px-2">1</p>
+                                <button class="cartDecrement py-1 px-2 border-l border-gray-400">-</button>
+                            </div>
+                        </div>
+
+                        <button class="add-to-cart-button flex gap-2 mt-4 bg-black text-white opacity-85 w-[160px]
+                        py-2 px-4 justify-center items-center rounded-md cursor-pointer">
+                            <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                        </button>
+                    </article>
+                </div>
+
+            </template>
 
             <!-- Why choose us Section -->
             <section class="w-full my-12 flex flex-col gap-10">
@@ -403,7 +476,8 @@
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, omnis?</p>
                             </li>
                             <li class="flex gap-4">
-                                <input type="email" id="email" placeholder="Your Email" class="rounded-md bg-gray-900 px-3 w-[170px] outline-none">
+                                <input type="email" id="email" placeholder="Your Email"
+                                    class="rounded-md bg-gray-900 px-3 w-[170px] outline-none">
                                 <div class="py-2 px-4 bg-lightBlue500 text-white rounded-md w-[150px]">
                                     <a href="contact.html" class="btn flex justify-center items-center gap-1">Submit</a>
                                 </div>
