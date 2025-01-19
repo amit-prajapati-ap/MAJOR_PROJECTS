@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navList {
-    @apply text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative group
+    @apply text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative
 }
 .navListUnderline {
     @apply absolute w-full h-1 bg-lightBlue bottom-0 hidden transition-all duration-200
