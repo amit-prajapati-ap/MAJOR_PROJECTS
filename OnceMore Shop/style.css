@@ -5,6 +5,14 @@
 .maxContainer {
     @apply w-[80%] max-w-[1440px] mx-auto
 }
+@media screen and (max-width: 550px) {
+    .maxContainer {
+        @apply w-[90%] max-w-[1440px] mx-auto
+    }
+}
+a {
+    text-decoration: none !important;
+}
 .home-hero {
     background: linear-gradient(30deg, rgb(0, 98, 255), white);
 }
@@ -27,4 +35,82 @@
 
 .custom-shape-divider-bottom-1737204177 .shape-fill {
     fill: #FFFFFF;
+}
+
+#toastbox {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+.toast {
+    border-radius: 5px;
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.3s linear forwards;
+}
+@keyframes moveleft {
+    100% {
+        transform: translateX(0);
+    }
+}
+.toast i {
+    margin: 0 20px;
+    font-size: 35px;
+}
+.added i {
+    color: green;
+}
+.removed i {
+    color: red;
+}
+.toast::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: green;
+    animation: anim 6s linear forwards;
+}
+@keyframes anim {
+    100% {
+        width: 0;
+    }
+}
+.toast.added::after {
+    background-color: green;
+}
+.toast.removed::after {
+    background-color: red;
+}
+
+@media screen and (max-width:600px) {
+    #toastbox {
+        padding: 10px;
+        top: 0;
+        right: 10px;
+        font-size: 0.7rem;
+    }
+    .toast {
+        width: 200px;
+        height: 50px;
+    }
+    .toast i {
+        margin: 0 20px;
+        font-size: 25px;
+    }
 }
