@@ -2,6 +2,7 @@ import { getCartProductFromLS } from "./getCartProductFromLS";
 import { showToast } from "./showToast";
 
 export const addToCart = (e, id, stock) => {
+
     let localStorageProduct = getCartProductFromLS();
 
     const currProductElement = document.querySelector(`#card${id}`);
@@ -44,6 +45,5 @@ export const addToCart = (e, id, stock) => {
         cartButton.innerHTML = localStorageProduct.length;
         localStorage.setItem("cart", `${localStorageProduct.length}`);
     }
-
     showToast(true, id);
 }

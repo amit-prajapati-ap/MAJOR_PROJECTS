@@ -1,6 +1,6 @@
 const footer = `
             <!-- Footer Section -->
-            <section class="bg-gray-800 text-lightGray mt-[200px]">
+             <section class="bg-gray-800 text-lightGray mt-[200px]">
                 <div class="maxContainer pb-10 pt-32 flex md:flex-row flex-col items-center gap-6">
 
                     <ul class="flex flex-col gap-6 md:w-[40%]">
@@ -16,16 +16,16 @@ const footer = `
                         </li>
                         <li class="w-[140px]">
                             <ul class="flex gap-1 justify-between">
-                                <li>
+                                <li class="cursor-pointer">
                                     <img src="assets/facebook-icon-2b65a866.svg">
                                 </li>
-                                <li>
+                                <li class="cursor-pointer">
                                     <img src="assets/twitter-icon-82cbd3e5.svg">
                                 </li>
-                                <li>
-                                    <img src="assets/github-icon-e2d5f6a2.svg">
+                                <li class="cursor-pointer">
+                                    <img src="assets/github-icon-e2d5f6a2.svg" class="invert">
                                 </li>
-                                <li>
+                                <li class="cursor-pointer">
                                     <img src="assets/instagram-icon-6c2b0c16.svg">
                                 </li>
                             </ul>
@@ -36,18 +36,18 @@ const footer = `
 
                         <ul class="flex flex-col gap-4">
                             <li class="font-bold text-lg">SHOPPING</li>
-                            <li class="opacity-80">Computer Store</li>
-                            <li class="opacity-80">Laptop Store</li>
-                            <li class="opacity-80">Accessories</li>
-                            <li class="opacity-80">Sales & Discount</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Computer Store</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Laptop Store</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Accessories</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Sales & Discount</li>
                         </ul>
 
                         <ul class="flex flex-col gap-4">
                             <li class="font-bold text-lg">EXPERIENCE</li>
-                            <li class="opacity-80">Contact Us</li>
-                            <li class="opacity-80">Payment Method</li>
-                            <li class="opacity-80">Delivery</li>
-                            <li class="opacity-80">Return and Exchange</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Contact Us</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Payment Method</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Delivery</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Return and Exchange</li>
                         </ul>
 
                         <ul class="flex flex-col gap-4 w-full sm:w-[35%]">
@@ -58,8 +58,8 @@ const footer = `
                             <li class="flex flex-row md:flex-col xl:flex-row gap-2 xl:gap-4">
                                 <input type="email" id="email" placeholder="Your Email"
                                     class="rounded-md bg-gray-900 px-3 py-2 w-[170px] outline-none">
-                                <div class="py-2 px-8 md:px-4 bg-lightBlue500 text-white rounded-md w-[150px]">
-                                    <a href="contact.html" class="btn flex justify-center items-center gap-1">Submit</a>
+                                <div class="py-2 px-8 md:px-4 bg-lightBlue500 text-white rounded-md w-[150px] hover:bg-blue-700 transition-all duration-300">
+                                    <button id="emailbtn" class="flex justify-center items-center gap-1">Submit</button>
                                 </div>
                             </li>
                         </ul>

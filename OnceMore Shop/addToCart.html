@@ -36,7 +36,25 @@
                 </section>
 
                 <!-- Total Section -->
-                <section class="Summary">
+                <section class="Summary justify-between w-full gap-4">
+
+                    <!-- Place Order Button -->
+                    <section class="placeItemsSection z-50">
+                        <div class="maxContainer">
+                            <button type="submit"
+                                class="placeButton py-3 px-4 cursor-pointer outline-none text-lg font-bold rounded-md bg-green-500 text-white hidden w-[200px]"
+                                id="placeOrderBtn">Place Order</button>
+                            <div
+                                class="popup rounded-md fixed top-0 left-[50%] text-center bg-white flex flex-col items-center">
+                                <img src="assets/404-tick.png" width="100px" class="mt-[-50px] rounded-full shadow-lg">
+                                <h2 class="text-3xl font-bold mt-[30px] mb-[10px]">Thank You!</h2>
+                                <p>Your Order is Placed Enjoy our Products and again Once More Shop!</p>
+                                <button type="button" id="okButton"
+                                    class="w-full mt-[50px] p-3 bg-green-500 text-white text-xl rounded-md cursor-pointer shadow-sm hover:scale-x-105 hover:shadow-lg shadow-green-300 transition-all duration-300 hover:bg-green-600">OK</button>
+                            </div>
+                        </div>
+                    </section>
+
                     <div class="bg-white border-2 border-black flex flex-col p-4 gap-6 rounded-md">
                         <p class="opacity-90">Selected Offer Summary</p>
                         <div class="flex flex-col gap-6">
@@ -60,23 +78,25 @@
                 <!-- Template Section -->
                 <template id="productCartTemplate">
                     <!-- Card 1 -->
-                    <div class="cards w-full bg-white rounded-lg border-2 my-2 h-[120px]" id="cardValue">
-                        <article class="card w-full flex justify-start items-center p-4 h-full gap-8">
-                            <div class="category rounded-full px-2 bg-red-100 text-red-500 text-center"
-                                style="width: 15%;">Computers
+                    <div class="cards w-full bg-white rounded-lg border-2 my-2 lg:h-[120px]" id="cardValue">
+                        <article
+                            class="card w-full grid grid-cols-3 lg:flex justify-start items-center p-4 h-full gap-8">
+                            <div
+                                class="category lg:w-[25%] rounded-full px-2 py-2 bg-green-100 text-green-500 text-center">
+                                Computers
                             </div>
 
                             <div class="imageContainer">
                                 <img src="assets/laptop.png" width="120px" class="productImage mx-auto">
                             </div>
 
-                            <h2 class="productName font-bold text-xl" style="width: 40%;">Laptop</h2>
+                            <h2 class="productName font-bold sm:text-xl" style="width: 40%;">Laptop</h2>
 
-                            <div class="productPriceElement flex items-center opacity-90">
+                            <div class="productPriceElement flex justify-center items-center opacity-90">
                                 <p class="productPrice">₹999.99</p>
                             </div>
 
-                            <div class="productQuantityElement w-full" style="max-width: 25%;">
+                            <div class="productQuantityElement w-full lg:max-w-[20%]">
                                 <div
                                     class="stockElement w-full grid grid-cols-3 items-center justify-center text-lg border border-gray-400">
                                     <button class="cartIncrement py-1 px-2 border-r border-gray-400">+</button>
@@ -86,25 +106,41 @@
                             </div>
 
                             <button
-                                class="remove-to-cart-button bg-black text-white opacity-85 py-2 rounded-md cursor-pointer px-4"
-                                style="width: 20%;">Remove</button>
+                                class="remove-to-cart-button bg-red-500 text-white opacity-85 py-2 rounded-md cursor-pointer px-4 lg:w-[20%]">Remove</button>
                         </article>
                     </div>
                 </template>
+
+                <!-- Empty Cart Section -->
+                <section class="emptyCart block py-16 w-full bg-white text-black">
+                    <div class="maxContainer flex flex-col gap-6 items-center justify-center w-full h-full">
+                        <img src="assets/emptyCart.png" width="50%">
+                        <h2 class="text-3xl">Your cart is empty!</h2>
+                        <p class="opacity-95 text-lg">Add items to it now</p>
+                        <a href="products.html"
+                            class="rounded-md hover:text-white px-20 py-4 bg-lightBlue500 text-white hover:bg-blue-600 transition-all duration-300">
+                            Shop now
+                        </a>
+                    </div>
+                </section>
+
             </div>
         </section>
 
         <!-- Footer Part -->
         <footer class="relative footerSection">
             <!-- Contact Section -->
-            <section class="max-w-[1440px] mx-auto w-[100%] sm:w-[80%] lg:w-[50%] bg-blue-400 text-black pb-4 pt-8 pl-8 sm:pl-16 absolute top-[80px] sm:right-[10%] md:right-[10%] lg:right-[25%] rounded-md">
+            <section
+                class="max-w-[1440px] mx-auto w-[100%] sm:w-[80%] lg:w-[50%] bg-blue-400 text-black pb-4 pt-8 pl-8 sm:pl-16 absolute top-[80px] sm:right-[10%] md:right-[10%] lg:right-[25%] rounded-md">
                 <div class="grid grid-cols-2 gap-6 items-center">
                     <div class="flex flex-col gap-2">
                         <h2 class="text-lg sm:text-xl font-bold">Let's revolutionize the way you study</h2>
                         <p class="opacity-80 my-2 text-[12px] sm:text-[16px]">Join our free bootcamps to know us better
                         </p>
-                        <div class="py-2 px-4 bg-lightBlue500 text-white rounded-md w-[150px]">
-                            <a href="contact.html" class="btn flex justify-center items-center gap-1">Start now <i
+                        <div
+                            class="py-2 px-4 bg-lightBlue500 text-white rounded-md w-[150px] hover:bg-blue-600 transition-all duration-300">
+                            <a href="contact.html"
+                                class="hover:text-white btn flex justify-center items-center gap-1">Start now <i
                                     class="fa-solid fa-arrow-circle-right"></i>
                             </a>
                         </div>

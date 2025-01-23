@@ -9,6 +9,12 @@
     .maxContainer {
         @apply w-[90%] max-w-[1440px] mx-auto
     }
+    .Summary {
+        flex-direction: column;
+    }
+    .placeItemsSection {
+        margin: 0 auto;
+    }
 }
 a {
     text-decoration: none !important;
@@ -113,4 +119,18 @@ a {
         margin: 0 20px;
         font-size: 25px;
     }
+}
+.popup {
+    visibility: hidden;
+    width: 382px;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 0 30px 30px;
+    color: #333;
+    transition: transform 0.4s, top 0.4s;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
+}
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }

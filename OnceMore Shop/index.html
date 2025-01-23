@@ -112,8 +112,8 @@
                                 </ul>
                             </nav>
                         </li>
-                        <li class="bg-gray-700 text-white rounded-md py-2 px-5 ml-4 cursor-pointer">
-                            <a href="addToCart.html" class="flex items-center gap-4" id="cartValue">
+                        <li class="bg-gray-700 text-white rounded-md py-2 px-5 ml-4 cursor-pointer group">
+                            <a href="addToCart.html" class="flex items-center gap-4 group-hover:text-white" id="cartValue">
                                 <i class="fa-solid fa-cart-shopping text-sm"></i>
                                 <p class="headerCartButton">0</p>
                             </a>
@@ -142,7 +142,7 @@
                             Explore the latest in the tech innovation and style with us. Shop now and discover a world
                             of possibilities!
                         </p>
-                        <button class="px-6 py-2 bg-gray-800 text-white w-[210px]">Explore our Products</button>
+                        <a href="products.html" class="hover:shadow-lg hover:scale-105 transition-all duration-500 px-6 py-2 bg-gray-800 text-white hover:text-white w-[210px]">Explore our Products</a>
                     </div>
 
                     <!-- Right Part -->
@@ -175,12 +175,12 @@
                 <div class="maxContainer grid md:grid-cols-3 text-black gap-4">
                     <!-- Card 1 -->
                     <div
-                        class="flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
+                        class="hover:shadow-lg hover:scale-105 transition-all hover:shadow-blue-500 duration-500 flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
                         <!-- Left Part -->
                         <div class="mb-8 flex flex-col justify-between">
                             <p class="text-gray-500 text-sm font-bold">New Year Sale</p>
                             <h3 class="text-black text-lg font-bold mb-2">Get and extra 50% off</h3>
-                            <a href="#" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
+                            <a href="products.html" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
                         </div>
 
                         <!-- Right Part -->
@@ -190,12 +190,12 @@
                     </div>
                     <!-- Card 2 -->
                     <div
-                        class="flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
+                        class="hover:shadow-lg hover:scale-105 transition-all hover:shadow-blue-500 duration-500 flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
                         <!-- Left Part -->
                         <div class="mb-8 flex flex-col justify-between">
                             <p class="text-gray-500 text-sm font-bold">New Year Sale</p>
                             <h3 class="text-black text-lg font-bold mb-2">Get and extra 50% off</h3>
-                            <a href="#" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
+                            <a href="products.html" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
                         </div>
 
                         <!-- Right Part -->
@@ -205,12 +205,12 @@
                     </div>
                     <!-- Card 3 -->
                     <div
-                        class="flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
+                        class="hover:shadow-lg hover:scale-105 transition-all hover:shadow-blue-500 duration-500 flex justify-between px-6 py-4 overflow-hidden relative shadow-md shadow-gray-400 bg-white">
                         <!-- Left Part -->
                         <div class="mb-8 flex flex-col justify-between">
                             <p class="text-gray-500 text-sm font-bold">New Year Sale</p>
                             <h3 class="text-black text-lg font-bold mb-2">Get and extra 50% off</h3>
-                            <a href="#" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
+                            <a href="products.html" class="text-gray-600 underline font-bold text-sm">SHOP NOW</a>
                         </div>
 
                         <!-- Right Part -->
@@ -293,7 +293,7 @@
             <template id="productTemplate">
 
                 <!-- Card 1 -->
-                <div id="cardValue" class="bg-white rounded-lg">
+                <div id="cardValue" class="bg-white rounded-lg hover:shadow-lg transition-all hover:shadow-blue-500 duration-500">
                     <article class="card flex flex-col justify-between p-4 h-full relative">
                         <div class="category rounded-full py-1 px-4 bg-red-100 text-red-500 absolute">Computers
                         </div>
@@ -331,13 +331,13 @@
                             <p class="productProperty opacity-90">Quantity(Pieces)</p>
                             <div
                                 class="stockElement w-full grid grid-cols-3 items-center justify-center text-lg border border-gray-400">
-                                <button class="cartIncrement py-1 px-2 border-r border-gray-400">+</button>
+                                <button class="cartIncrement py-1 px-2 border-r border-gray-400 hover:bg-green-500 transition-all duration-300 text-2xl">+</button>
                                 <p class="productQuantity py-1 text-center px-2">1</p>
-                                <button class="cartDecrement py-1 px-2 border-l border-gray-400">-</button>
+                                <button class="cartDecrement py-1 px-2 border-l border-gray-400 hover:bg-red-500 transition-all duration-300 hover:text-white text-2xl">-</button>
                             </div>
                         </div>
 
-                        <button class="add-to-cart-button flex gap-2 mt-4 bg-black text-white opacity-85 w-[160px]
+                        <button class="add-to-cart-button hover:shadow-md hover:scale-105 transition-all hover:shadow-emerald-400 duration-500 flex gap-2 mt-4 bg-green-700 text-white opacity-85 w-[160px]
                         py-2 px-4 justify-center items-center rounded-md cursor-pointer">
                             <i class="fa-solid fa-cart-shopping"></i> Add To Cart
                         </button>
@@ -363,7 +363,7 @@
                     <!-- Cards -->
                     <div class="flex flex-col justify-between gap-6">
                         <!-- Card 1 -->
-                        <div class="flex flex-col items-end gap-1">
+                        <div class="flex flex-col items-end gap-1 ">
                             <p
                                 class="rounded-full px-5 sm:px-7 py-3 sm:py-5 bg-blue-100 text-xl sm:text-2xl text-blue-800">
                                 1</p>
@@ -456,8 +456,8 @@
                         <h2 class="text-lg sm:text-xl font-bold">Let's revolutionize the way you study</h2>
                         <p class="opacity-80 my-2 text-[12px] sm:text-[16px]">Join our free bootcamps to know us better
                         </p>
-                        <div class="py-2 px-4 bg-lightBlue500 text-white rounded-md w-[150px]">
-                            <a href="contact.html" class="btn flex justify-center items-center gap-1">Start now <i
+                        <div class="py-2 px-4 bg-lightBlue500 text-white rounded-md w-[150px] hover:bg-blue-600 transition-all duration-300">
+                            <a href="contact.html" class="hover:text-white btn flex justify-center items-center gap-1">Start now <i
                                     class="fa-solid fa-arrow-circle-right"></i>
                             </a>
                         </div>
@@ -484,17 +484,25 @@
                         </li>
                         <li class="w-[140px]">
                             <ul class="flex gap-1 justify-between">
-                                <li>
-                                    <img src="assets/facebook-icon-2b65a866.svg">
+                                <li class="cursor-pointer">
+                                    <a href="https://www.linkedin.com/in/amit-prajapati-0544882b5/">
+                                        <img src="assets/linkedin.png" width="25px" class="bg-white rounded-md">
+                                    </a>
                                 </li>
-                                <li>
-                                    <img src="assets/twitter-icon-82cbd3e5.svg">
+                                <li class="cursor-pointer">
+                                    <a href="https://x.com/Prajapatiamitap">
+                                        <img src="assets/twitter-icon-82cbd3e5.svg" class="bg-white rounded-md">
+                                    </a>
                                 </li>
-                                <li>
-                                    <img src="assets/github-icon-e2d5f6a2.svg">
+                                <li class="cursor-pointer">
+                                    <a href="https://github.com/amit-prajapati-ap">
+                                        <img src="assets/github-icon-e2d5f6a2.svg" class="bg-white rounded-md">
+                                    </a>
                                 </li>
-                                <li>
-                                    <img src="assets/instagram-icon-6c2b0c16.svg">
+                                <li class="cursor-pointer">
+                                    <a href="https://www.youtube.com/@FunFilledCoding/">
+                                        <img src="assets/youtube.png" width="25px" class="bg-white rounded-md">
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -504,18 +512,18 @@
 
                         <ul class="flex flex-col gap-4">
                             <li class="font-bold text-lg">SHOPPING</li>
-                            <li class="opacity-80">Computer Store</li>
-                            <li class="opacity-80">Laptop Store</li>
-                            <li class="opacity-80">Accessories</li>
-                            <li class="opacity-80">Sales & Discount</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Computer Store</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Laptop Store</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Accessories</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Sales & Discount</li>
                         </ul>
 
                         <ul class="flex flex-col gap-4">
                             <li class="font-bold text-lg">EXPERIENCE</li>
-                            <li class="opacity-80">Contact Us</li>
-                            <li class="opacity-80">Payment Method</li>
-                            <li class="opacity-80">Delivery</li>
-                            <li class="opacity-80">Return and Exchange</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Contact Us</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Payment Method</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Delivery</li>
+                            <li class="opacity-80 cursor-pointer hover:text-lightBlue500 transition-all duration-300">Return and Exchange</li>
                         </ul>
 
                         <ul class="flex flex-col gap-4 w-full sm:w-[35%]">
@@ -526,8 +534,8 @@
                             <li class="flex flex-row md:flex-col xl:flex-row gap-2 xl:gap-4">
                                 <input type="email" id="email" placeholder="Your Email"
                                     class="rounded-md bg-gray-900 px-3 py-2 w-[170px] outline-none">
-                                <div class="py-2 px-8 md:px-4 bg-lightBlue500 text-white rounded-md w-[150px]">
-                                    <a href="contact.html" class="btn flex justify-center items-center gap-1">Submit</a>
+                                <div class="py-2 px-8 md:px-4 bg-lightBlue500 text-white rounded-md w-[150px] hover:bg-blue-700 transition-all duration-300">
+                                    <button id="emailbtn" type="submit" class="flex justify-center items-center gap-1 ">Submit</button>
                                 </div>
                             </li>
                         </ul>

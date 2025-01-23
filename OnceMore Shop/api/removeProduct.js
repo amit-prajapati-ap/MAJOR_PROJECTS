@@ -16,5 +16,10 @@ export const removeProduct = (e,id) => {
     localStorage.setItem("cart",`${cart}`);
     updateTotalSummary();
 
+    if(cart == 0) {
+        document.querySelector(".emptyCart").style.display = "block";
+        document.querySelector(".Summary").style.display = "none";
+    }
+
     showToast(false, id);
 }

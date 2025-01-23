@@ -12,7 +12,7 @@ export const updateTotalSummary = () => {
         document.querySelector(".Summary").style.display = "none";
     }
     else {
-        document.querySelector(".Summary").style.display = "block";
+        document.querySelector(".Summary").style.display = "flex";
     }
 
     cartProducts.forEach(currProd => {

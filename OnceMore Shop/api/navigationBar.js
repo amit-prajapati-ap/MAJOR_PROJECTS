@@ -1,6 +1,6 @@
 const navbar = `
-    <!-- CTO top -->
-            <section class="top-txt w-full h-[40%] bg-gray-800 flex py-3">
+   <!-- CTO top -->
+             <section class="top-txt w-full h-[40%] bg-gray-800 flex py-3">
                 <div class="maxContainer flex justify-between items-center">
                     <div class="sm:w-[60%] w-[55%] md:w-[380px] head-txt text-lightGray font-bold">
                         <p class="text-[11px] sm:text-[16px]">Free shipping, 30-day return or refund guarantee.</p>
@@ -89,16 +89,15 @@ const navbar = `
                                 </ul>
                             </nav>
                         </li>
-                        <li class="bg-gray-700 text-white rounded-md py-2 px-5 ml-4 cursor-pointer">
-                            <a href="addToCart.html" class="flex items-center gap-4" id="cartValue">
+                        <li class="bg-gray-700 text-white rounded-md py-2 px-5 ml-4 cursor-pointer group">
+                            <a href="addToCart.html" class="flex items-center gap-4 group-hover:text-white" id="cartValue">
                                 <i class="fa-solid fa-cart-shopping text-sm"></i>
                                 <p class="headerCartButton">0</p>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </div>
-`;
+            </div>`;
 
 let navSection = document.querySelector("#section-navbar");
 navSection.innerHTML = navbar;
